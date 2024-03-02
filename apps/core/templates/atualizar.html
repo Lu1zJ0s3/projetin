@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Veículo</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'core.css' %}">
+
+<body>
+    <div class="container2">
+        <h1>Atualizar Veículo</h1>
+        <form action="{% url 'atualizar' veiculo.id %}" method="post">
+            {% csrf_token %}
+            <label for="">Nome</label><br><br>
+            <input type="text" name="nome" value="{{veiculo.nome}}"><br><br>
+            <label for="">Cor</label><br><br>
+            <input type="text" name="cor" value="{{veiculo.cor}}"><br><br>
+            <label for="">Montadora</label><br><br>
+            <input type="text" name="montadora" value="{{veiculo.montadora}}"><br><br>
+            <button type="submit" id="new1">Atualizar</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
