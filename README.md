@@ -1,1 +1,1 @@
-"# projetin" 
+Este projeto é uma aplicação web desenvolvida para cadastrar e listar carros de forma simples e prática. O administrador pode adicionar informações detalhadas sobre os carros, incluindo nome, cor e montadora. Além disso, a plataforma permite editar ou excluir as informações dos carros diretamente na página de listagem, proporcionando uma gestão flexível e fácil de usar.
