@@ -6,24 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Veículo</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'core.css' %}">
 </head>
-{% load static %}
-<link rel="stylesheet" href="{% static 'core.css' %}">
 
 <body>
-    <div class="container1">
-        <h1>Adicionar Veículo</h1>
-        <form action="{% url 'adicionar' %}" method="post">
+    <div class="container py-5">
+        <h1 class="mb-4 text-center">Adicionar Veículo</h1>
+        <form action="{% url 'adicionar' %}" method="post" class="mx-auto" style="max-width: 500px;">
             {% csrf_token %}
-            <label for="">Nome</label><br><br>
-            <input type="text" name="nome"><br><br>
-            <label for="">Cor</label><br><br>
-            <input type="text" name="cor"><br><br>
-            <label for="">Montadora</label><br><br>
-            <input type="text" name="montadora"><br><br>
-            <button type="submit" id="new">Enviar</button>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="cor" class="form-label">Cor</label>
+                <input type="text" class="form-control" id="cor" name="cor" required>
+            </div>
+            <div class="mb-3">
+                <label for="montadora" class="form-label">Montadora</label>
+                <input type="text" class="form-control" id="montadora" name="montadora" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success btn-lg">Enviar</button>
+            </div>
         </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
